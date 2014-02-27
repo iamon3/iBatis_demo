@@ -14,6 +14,20 @@
           <property name="JDBC.Password" value="cloudrules"/>
         </dataSource>
       </transactionManager>
+
+	<property name="JDBC.AutoCommit" value="true"/>
+
+	<property name="Pool.MaximumActiveConnections" value="10"/>
+
+	<property name="Pool.MaximumIdleConnections" value="5"/>
+
+	<property name="Pool.MaximumCheckoutTime" value="150000"/> 
+
+	<property name="Pool.MaximumTimeToWait" value="500"/> 
+
+	<property name="Pool.PingQuery" value="select 1 from Employee"/> 
+
+	<property name="Pool.PingEnabled" value="false"/>
     
     <sqlMap resource="user.xml"/>
 
