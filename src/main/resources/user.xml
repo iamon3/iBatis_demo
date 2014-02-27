@@ -34,5 +34,11 @@
 	<delete id="deleteUserById" parameterClass="java.lang.Integer">
 		  DELETE FROM USERINFO WHERE ID = #value#
 	</delete>
+
+	<!-- To call stored procedure. -->
+		<procedure id="getEmpInfo" resultClass="Employee"
+              	parameterMap="getEmpInfoCall">
+   		{ call getEmp( #acctID# ) } 
+	</procedure>
 	
 </sqlMap>
